@@ -8,11 +8,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.brown,
         foregroundColor: Colors.white,
         // leading: Icon(Icons.home, color: Colors.amber),
         title: Text("HomePage"),
         actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
           IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
           IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
         ],
