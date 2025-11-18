@@ -47,14 +47,34 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             Text(
               "Hello, Welcome to our project!!",
               style: GoogleFonts.lobster(
-                textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                textStyle: const TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
+            const SizedBox(height: 20),
+
+            // ---------------- Search Bar ----------------
+            TextField(
+              decoration: InputDecoration(
+                hintText: "Search...",
+                prefixIcon: const Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                filled: true,
+                fillColor: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 20),
+
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
