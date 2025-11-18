@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -28,8 +29,9 @@ class HomePage extends StatelessWidget {
         children: [
           DrawerHeader(
             child: UserAccountsDrawerHeader(
-              accountName: Text("Name"),
-              accountEmail: Text("Email"),
+              accountName: Text("Shuva"),
+              accountEmail: Text("farjanayasmen1901@gmail.com"),
+              decoration: BoxDecoration(color: Colors.indigo),
             ),
           ),
           ListTile(
@@ -43,6 +45,39 @@ class HomePage extends StatelessWidget {
             title: Text("Profile"),
           ),
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Text(
+              "Hello, Welcome to our project!!",
+              style: GoogleFonts.lobster(
+                textStyle: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueGrey,
+                foregroundColor: Colors.white,
+                fixedSize: Size(100, 20),
+              ),
+              child: Text("Click"),
+            ),
+            SizedBox(height: 20),
+            OutlinedButton(onPressed: () {}, child: Text("OutlinedButton")),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/fluter.png',
+                  height: 400,
+                  fit: BoxFit.fill,
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
